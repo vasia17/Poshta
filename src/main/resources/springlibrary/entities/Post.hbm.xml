@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="springlibrary.entities.Post" table="post" schema="post">
+        <id name="id" column="ID"/>
+        <property name="customername" column="customername"/>
+        <property name="customernumber" column="customernumber"/>
+        <property name="productname" column="productname"/>
+    </class>
+</hibernate-mapping>
