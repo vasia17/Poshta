@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `post` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `post`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: post
@@ -16,14 +18,22 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `post`
+-- Table structure for table `post`
 --
 
-LOCK TABLES `post` WRITE;
-/*!40000 ALTER TABLE `post` DISABLE KEYS */;
-INSERT INTO `post` VALUES (54545,'asd','asd','asd'),(123123,'Dok Serg','0997879544','Socks'),(4525252,'asdasd','asdasd','asdasd'),(123123123,'Liubka Olexandr','0665949534','Table'),(123456789,'Vasia Fogel','0995586174','Mouse');
-/*!40000 ALTER TABLE `post` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `post`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `post` (
+  `ID` int(11) NOT NULL,
+  `customername` varchar(45) NOT NULL,
+  `customernumber` varchar(45) NOT NULL,
+  `productname` varchar(45) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `post`.`post` (`ID`, `customername`, `customernumber`, `productname`) VALUES ('064298524', 'Vasia Fogel', '0995586174', 'Mouse');
+INSERT INTO `post`.`post` (`ID`, `customername`, `customernumber`, `productname`) VALUES ('43y698348', 'Liubka Alex', '0665949534', 'Table');
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -34,4 +44,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-12-07 14:42:06
+-- Dump completed on 2015-12-07 14:56:35
